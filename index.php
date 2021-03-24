@@ -1,8 +1,11 @@
 <?php
+
 function printBithday($day, $fio){
     $rowStyles = array('even','odd');
     static $styleIndex = 0;
-    echo "<tr class=\"".$rowStyles[$styleIndex].'"><td>' . date("d.m", $day) . '</td><td>' . $fio . "</td></tr>";
+    global $today1970;
+    $class = $today1970 === $day ? 'birthday' : $rowStyles[$styleIndex];
+    echo "<tr class=\"". $class .'"><td>' . date("d.m", $day) . '</td><td>' . $fio . "</td></tr>";
     $styleIndex = 1 - $styleIndex;
 }
 

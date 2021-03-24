@@ -1,8 +1,8 @@
 body {
     font: 200% sans-serif;
 }
-table {
-    background: darkgray;
+th {
+    background: #ffa500;
 
     /*color: white; // Цвет текста*/
    }
@@ -17,4 +17,8 @@ table {
 
 .odd {
     background: white;
+}
+
+.birthday {
+    background: red;
 }
